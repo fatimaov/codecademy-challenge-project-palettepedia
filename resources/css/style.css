@@ -1,0 +1,213 @@
+/* Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    /* safer than fixed pt → scales with user settings */
+    font-weight: 400;
+    line-height: 1.2;
+    /* unitless, not cramped */
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+
+
+}
+
+
+/* Disabled Selection */
+
+.banner,
+header,
+footer {
+    user-select: none;
+    -webkit-user-select: none;
+    /* Chrome, Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/old Edge */
+}
+
+body *::selection {
+    background-color: rgba(240, 128, 128, 0.3);
+
+}
+
+/* ---------------------------------------------------------------------------- B O D Y */
+
+body {
+    /* height: 2000px; */
+    overflow: scroll;
+}
+
+.banner {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    background-color: rgba(255, 255, 255);
+
+    /* border-bottom: 1px solid black; */
+}
+
+.banner img {
+    margin: 20px 30px;
+    height: 50px;
+}
+
+.banner p {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+
+    margin: 30px;
+
+    font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 90%;
+
+    color: rgba(0, 0, 0, 0.7);
+    /* background-color: wheat; */
+}
+
+
+
+/* ---------------------------------------------------------------------------- H E A D E R */
+
+header {
+
+    padding: 90px 0;
+
+    background: linear-gradient(45deg, khaki, violet, mediumpurple);
+}
+
+.header-container {
+
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+
+    width: 45%;
+
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+
+    transition: 0.5s;
+
+}
+
+.header-container h1 {
+
+    font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+    font-size: 250%;
+    line-height: 1.5;
+
+    margin: 20px auto;
+
+    color: white;
+
+
+}
+
+.header-container p {
+    font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+    margin: 20px auto;
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 2;
+
+    width: 90%;
+
+    color: white;
+}
+
+.header-container:hover {
+    box-shadow: 0 0 80px rgba(255, 255, 255, 1);
+}
+
+
+/* ---------------------------------------------------------------------------- T A B L E */
+
+
+table {
+    background-color: transparent;
+    margin: 90px auto 90px auto;
+    width: 100%;
+    table-layout: fixed;
+
+    text-align: center;
+
+
+    border-spacing: 10px;
+
+}
+
+td {
+    width: 7%;
+    padding: 5px 0;
+    border-radius: 5px;
+    font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    font-weight: 300;
+    transition: 0.2s;
+}
+
+td:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------------------------------------------------------------------------- F O O T E R */
+
+footer {
+    text-align: center;
+    height: 90px;
+    background: linear-gradient(45deg, khaki, violet, mediumpurple);
+    font-size: 90%;
+
+}
+
+footer p {
+    font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    color: white;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+    width: 30%;
+    margin: auto;
+    position: relative;
+
+    top: 35px; /*Centered vertically within the 90px footer height*/
+
+}
+
+footer span {
+    font-weight: 400;
+}
+
+footer p span::after {
+    content: " ‪‪❤︎‬";
+}
+
+
+
+
