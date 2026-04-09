@@ -26,10 +26,7 @@ body * {
     list-style: none;
     text-decoration: none;
     color: inherit;
-
-
 }
-
 
 /* Disabled Selection */
 
@@ -47,23 +44,20 @@ footer {
 
 body *::selection {
     background-color: rgba(240, 128, 128, 0.3);
-
 }
 
 /* ---------------------------------------------------------------------------- B O D Y */
 
 body {
     /* height: 2000px; */
-    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .banner {
     position: sticky;
     top: 0;
     z-index: 10;
-
     background-color: rgba(255, 255, 255);
-
     /* border-bottom: 1px solid black; */
 }
 
@@ -76,15 +70,12 @@ body {
     display: inline-block;
     position: absolute;
     right: 0px;
-
     margin: 30px;
-
     font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
     line-height: 30px;
     font-weight: 300;
     letter-spacing: 3px;
     font-size: 90%;
-
     color: rgba(0, 0, 0, 0.7);
     /* background-color: wheat; */
 }
@@ -94,39 +85,27 @@ body {
 /* ---------------------------------------------------------------------------- H E A D E R */
 
 header {
-
     padding: 90px 0;
-
     background: linear-gradient(45deg, khaki, violet, mediumpurple);
 }
 
 .header-container {
-
     text-align: center;
     margin: auto;
     padding: 20px;
-
     width: 45%;
-
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.05);
     box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
-
     transition: 0.5s;
-
 }
 
 .header-container h1 {
-
     font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
     font-size: 250%;
     line-height: 1.5;
-
     margin: 20px auto;
-
     color: white;
-
-
 }
 
 .header-container p {
@@ -135,9 +114,7 @@ header {
     font-weight: 200;
     letter-spacing: 1px;
     line-height: 2;
-
     width: 90%;
-
     color: white;
 }
 
@@ -154,12 +131,17 @@ table {
     margin: 90px auto 90px auto;
     width: 100%;
     table-layout: fixed;
-
     text-align: center;
-
-
     border-spacing: 10px;
+}
 
+.table-wrapper {
+    width: 100%;
+}
+
+.tablet-table,
+.phone-table {
+    display: none;
 }
 
 td {
@@ -209,7 +191,6 @@ footer {
     height: 90px;
     background: linear-gradient(45deg, khaki, violet, mediumpurple);
     font-size: 90%;
-
 }
 
 footer p {
@@ -221,13 +202,99 @@ footer p {
     width: 30%;
     margin: auto;
     position: relative;
-
     top: 35px; /*Centered vertically within the 90px footer height*/
-
 }
 
 footer span {
     font-weight: 400;
+}
+
+/* ---------------------------------------------------------------------------- T A B L E T / S M A L L E R   S C R E E N S */
+
+@media only screen and (max-width: 768px) {
+    .desktop-table {
+        display: none;
+    }
+
+    .tablet-table {
+        display: block;
+    }
+
+    .banner {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .banner img {
+        display: block;
+        margin: 0 auto;
+        height: 42px;
+    }
+
+    .banner p {
+        position: static;
+        display: block;
+        margin: 10px 0 0;
+        letter-spacing: 2px;
+        font-size: 75%;
+    }
+
+    header {
+        padding: 60px 20px;
+    }
+
+    .header-container {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .header-container h1 {
+        font-size: 180%;
+    }
+
+    .table-wrapper {
+        padding: 0 10px 30px;
+    }
+
+    table {
+        width: 100%;
+        margin: 50px 0;
+        border-spacing: 8px;
+        table-layout: fixed;
+    }
+
+    td {
+        width: auto;
+        padding: 10px 6px;
+        font-size: 85%;
+    }
+
+    footer {
+        height: auto;
+        padding: 25px 20px;
+    }
+
+    footer p {
+        width: 100%;
+        position: static;
+    }
+}
+
+/* ---------------------------------------------------------------------------- P H O N E S */
+
+@media only screen and (max-width: 480px) {
+    .tablet-table {
+        display: none;
+    }
+
+    .phone-table {
+        display: block;
+    }
+
+    td {
+        padding: 14px 10px;
+        font-size: 90%;
+    }
 }
 
 footer p span::after {
