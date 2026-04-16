@@ -2,7 +2,7 @@
 
 PalettePedia is a small front-end project built as part of the Codecademy Full-Stack Engineer career path. The goal of the exercise was to create a cheatsheet for a concept I had learned, and I chose to build a CSS color cheatsheet where users can view all the named CSS colors, see each color name directly on its cell, and copy a color name by clicking the cell so it is ready to paste into a project.
 
-![PalettePedia preview](./resources/img/palettepedia-img.png)
+[![PalettePedia preview](./resources/img/palettepedia-img.png)](https://fatimaov.github.io/codecademy-challenge-project-palettepedia/)
 
 ## What I Practiced
 
