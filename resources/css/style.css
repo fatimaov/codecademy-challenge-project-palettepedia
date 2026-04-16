@@ -297,9 +297,6 @@ footer span {
     }
 }
 
-footer p span::after {
-    content: " ‪‪❤︎‬";
-}
 
 
 
